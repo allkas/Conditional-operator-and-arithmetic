@@ -106,3 +106,78 @@ const timeYear = (num) => {
   if (num === 6 || num === 7 || num === 8) console.log('summer');
   if (num === 9 || num === 10 || num === 11) console.log('autumn');
 };
+// Пользователь вводит два числа. Если они не равны 10 и первое число четное, то вывести их сумму, иначе вывести их произведение.
+const twonumbers = (num1, num2) => {
+  if (num1 !== 10 && num2 !== 10 && num1 % 2 === 0) {
+    console.log(num1 + num2);
+  } else {
+    console.log(num1 * num2);
+  }
+};
+
+// Пользователь вводит три числа. Если все числа больше 10 и первые два числа делятся на 3, то вывести yes, иначе no
+const threNumbers = (num1, num2, num3) => {
+  if (num1 > 10 && num2 > 10 && num3 > 10 && num1 % 3 === 0 && num2 % 3 === 0) {
+    console.log('yes');
+  } else {
+    console.log('no');
+  }
+};
+
+// Пользователь вводит три числа. Найти сумму тех чисел, которые делятся на 5. Если таких чисел нет, то вывести error.
+const numbers = (num1, num2, num3) => {
+  if (num1 % 5 === 0 && num2 % 5 === 0 && num3 % 5 === 0) {
+    console.log(num1 + num2 + num3);
+  }
+  if (num1 % 5 === 0 && num2 % 5 === 0) {
+    console.log(num1 + num2);
+  }
+  if (num1 % 5 === 0 && num3 % 5 === 0) {
+    console.log(num1 + num3);
+  }
+  if (num2 % 5 === 0 && num3 % 5 === 0) {
+    console.log(num2 + num3);
+  }
+};
+
+// Даны три числа. Найдите наибольшее число из них.
+const threeNumb = (num1, num2, num3) => {
+  if (num1 > num2 && num1 > num3) {
+    console.log(num1);
+  }
+  if (num2 > num1 && num2 > num3) {
+    console.log(num2);
+  }
+  if (num3 > num1 && num3 > num2) {
+    console.log(num3);
+  }
+};
+
+// Дана дата из трех чисел (день, месяц и год). Вывести yes, если такая дата существует (например, 12 02 1999 - yes, 22 13 2001 - no). Считать, что в феврале всегда 28 дней.
+const date = (day, month, year) => {
+  if (month === 02) {
+    if (day >= 1 && day <= 28) {
+      return 'yes';
+    } else {
+      return 'no';
+    }
+  }
+  if ((day <= 31 && day >= 1) && (month >= 1 && month <= 12) && (year >= 1000)) {
+    return 'yes';
+  } else {
+    return 'no';
+  }
+};
+date(22, 02, 1980)
+
+// Дано трехзначное число. Переставьте первую и последнюю цифры.
+const threeNumber = (num) => {
+  const string = String(num);
+  arrString = string.split('');
+  const newArr = [];
+  for (let i = arrString.length - 1; i >= 0; i -= 1) {
+    newArr.push(arrString[i]);
+  }
+  console.log(newArr.join(''))
+}
+threeNumber(123);
